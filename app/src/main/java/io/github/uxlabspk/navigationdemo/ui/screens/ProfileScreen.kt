@@ -9,8 +9,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun ProfileScreen(navController: NavHostController) {
@@ -28,4 +30,11 @@ fun ProfileScreen(navController: NavHostController) {
             Text("Go Back")
         }
     }
+}
+
+@Composable
+@Preview
+fun ProfileScreenPreview() {
+    val navController = rememberNavController()
+    ProfileScreen(navController)
 }
